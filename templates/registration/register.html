@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<head>
+     <meta charset="UTF-8">  
+    <title>Register</title>   
+  <title></title>
+</head>
+  <form method ="post" class ="one" action ="{% url 'accounts:register' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="one">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="one">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+    <button name ="submit">Register</button>
+    <input type ="hidden" name="next" value="{% url 'pages:index' %}" />
+  </form>
+
+{% endblock content %}

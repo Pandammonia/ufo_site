@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+<h1 class ="one"><center>Blog Posts</center></h1>
+<p class= "one">
+<p class ="one">Want to submit your own blog post?</p>
+<p class="one">
+<h2 class="one">Latest blog posts:</h2>
+{% for post in posts %}
+<h3 class="one">
+<a href="{{post.get_absolute_url }}">{{post.title}}</a>
+{{post.body|truncatewords:30|linebreaks }}
+</h3>
+ Posted by {{post.name }} on {{post.added}}</h2></p><br>
+{% endfor %}
+{% endblock content %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<div>
+<body>
+{% block content %}
+<h1 class ="one"><center>Ghosts and Greys</center></h1>
+<p class ="one">All articles below are the work of users and visitors to the site, I wanted users to have their own section to seperate personal/communities views from my own. <br><br>Want to submit your own blog post?
+<a href="{% url 'blog:submitarticle' %}">Click here!</a>
+</p>
+<p class="one">
+<h2 class="one">Latest user submitted posts:</h2>
+{% for post in posts %}
+<h3 class="one">
+<a href="{{post.get_absolute_url }}">{{post.title}}</a>
+{{post.body|truncatewords:30|linebreaks }}
+</h3>
+ Posted by {{post.author }} on {{post.added}}</h2></p><br>
+{% endfor %}
+{% endblock content %}
+</body>
+</div>
+</html>

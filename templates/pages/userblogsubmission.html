@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1 class="one">Submit a blog post</h1>
+<p class="one">Please fill out the form below to submit your blog post/entry
+	  <form method ="post" class ="one" action ="{% url 'pages:userblog' %}">
+    {% csrf_token %}
+{{ form.as_p}}
+<input type="Submit" value="Submit">
+</form>
+</p>
+{% endblock content %}
+</body>
+</html>

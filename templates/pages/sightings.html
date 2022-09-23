@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+	<h1 class="one"><center>Sightings of UFO/UAP by users<center></h1>
+
+
+	<p class="one">
+	{% for sighting in sightings %}
+	<a href="{% url 'pages:stdetail' sighting.id %}">{{sighting.subj}}&nbsp;</a>:Submitted by {{sighting.name}}<br><br>
+	{% empty %}
+	No sightings have been added here yet :(
+	{% endfor %}
+
+</p>
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1 class="one">Submit your own theory!</h1>
+<p class="one">Please fill out the form below and send me theories on UFO's/UAP, they can be on any and all subjects of the phenomena and can be as out there or scientifically backed as you like. I'll sort through each and every one, categorise them and post them.
+	  <form method ="post" class ="one" action ="{% url 'pages:theory' %}">
+    {% csrf_token %}
+{{ form.as_p}}
+All emails will be kept anonymous <br>
+<input type="Submit" value="Submit">
+</form>
+</p>
+{% endblock content %}
+</body>
+</html>

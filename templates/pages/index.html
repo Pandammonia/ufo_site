@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+<html>
+<head>
+	{% load static %}
+	
+	<link rel="stylesheet" href="{% static '/css/style.css' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<div>
+<body>
+	{% block content %}
+<h1 class ="one">Ghosts and Greys</h1>
+<p class= "one"> If this is your first visit we have an <a href="{% url 'pages:intro' %}">Introduction</a> page, and a few other pages aimed at getting people unfamiliar to the subject up to speed.</p>
+
+<p> Added </p>
+<p class = "one">There's a <em>very</em> small subreddited associated with this site/idea at r/OnlyUFOfans as well.</p>
+<p class ="one">Finally, please be aware that this site is in it's early stages and whilst its main purpose revolves around archiving and collecting data I do plan on making it generally look better. The priority was getting the back-end up and running and functional so that it serves its purpose data collection wise. Please bare with me as I handle both the back end and the front end of the site. I appreciate your patience</p>
+
+<h2 class="one">Latest articles:</h2><br>
+
+<a href="{% url 'pages:are' %}">Are aliens demons or what?</a> Posted by: Admin. 
+</p>
+<p>
+{% endblock content %}
+</p>
+</body>
+</div>
+</html>

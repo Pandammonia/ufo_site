@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+	<h1 class ="one"><center>User submitted posts</center></h1>
+{% for post in posts %}
+<a href="{{post.get_absolute_url }}">{{post.title}}</a>
+
+Posted by {{post.username }} on {{post.added}}</h2></p><br>
+{% endfor %}
+{% endblock content %}
+
+</body>
+</html>

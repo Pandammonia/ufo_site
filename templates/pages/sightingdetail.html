@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+	<h1 class="one"><center>Sighting submitted by user: {{sighting.name}}</center></h1>
+	<p class="one">
+		<h1 class="one">{{sighting.subj}}</h1>
+		<h2 class="one">Details:</h2>
+		{{ sighting.body }}<br>
+		Sighting time: {{sighting.time_of }}
+		Theory submitted by: {{sighting.name}}. (if blank user chose to remain anonymous)	
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+	<h1 class="one"><center>Theory submitted by user: {{theory.Name}}</center></h1>
+	<p class="one">
+		<h1 class="one">{{theory.Title}}</h1>
+		<h2 class="one">Details:</h2>
+		{{ theory.Details }}<br><br>
+		Theory submitted by: {{theory.Name}}. (if blank user chose to remain anonymous)	
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1 class="one">Submit your own article or blog post here!</h1>
+<p class="one">Please fill out the form below
+	  <form method ="post" class ="one" action ="{% url 'blog:submitarticle' %}">
+    {% csrf_token %}
+{{ form.as_p}}
+All emails will be kept anonymous and will not be posted. <br>
+<input type="Submit" value="Submit">
+</form>
+</p>
+{% endblock content %}
+</body>
+</html>

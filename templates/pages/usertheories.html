@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+	<h1 class="one"><center>Theories on UAP/UFO/Aliens/'The phenomena' by users<center></h1>
+
+
+	<p class="one">
+	{% for theory in theories %}
+	<a href="{% url 'pages:thdetail' theory.id %}">{{theory.Title}} : submitted by {{theory.Name}}</a><br><br>
+	{% empty %}
+	No theories have been added here yet :(
+	{% endfor %}
+
+</p>
+{% endblock content %}
+</body>
+</html>

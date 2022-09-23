@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Newcomers</title>
+</head>
+<body>
+	{% block content %}
+	<h1 class= "one"><center>Introduction</center></h1>
+	<p class ="one">The idea of this site is to serve content to anyone interested in the subject of UFO's regardless of knowledge, experience, familiarity or level of belief. I personally think its extremely important to stop treating this subject as being one that has two distinctly seperately groups of interest parties, what I mean by this is that over time and in no small part due to the efforts of media and the government, a wedge has been driven into this subject that absolutely polarises people from the get go. In short you're given the choice of being a 'believer' and with that also comes the badge of honour of being known as a kook, conspiracy theorist or keen fasionista of tin foil apparell, or you can be a skeptic, a sensible, rational person who looks at the idea that little green men are grabbing their packed lunches, climbing into a flying saucer 1 million light years away and zooming straight to earth to get their fill of probing, cow levitation and artistic expression in the form of annoying farmers and ruining wheat harvests.</p>
+
+	<p class="one">This is in my opinion the biggest enemy of truth, by presenting people with such a polarising choice, the majority are understably going the "sane" route and while this might not seem like all <em>that</em> big of a problem, what it does is stifle discussion, dissuade curiosity and stigmatise the subject. This has long been the goal of the organised opposition and in my opinion the best way of overcoming this is to stop viewing this subject as something that "might" happening and accepting that it's been beyond proved that something is happening, regardless of opinion and to shift the focus from trying to provide "solid legitimate evidence" to trying to get to the bottom of what is actually occuring.</p>
+
+	<p class ="one">As such the overall approach of this site will not be from a skeptical viewpoint, but from a position that the legitimacey of the phenomena is fact and that what we must now focus on is the what/where/why of the subject. 
+
+	That being said, to anyone new to the subject i encourage you to first read through the
+	<a href="{% url 'pages:introcases' %}">cases</a> page for a brief overview of some of the better known cases, <a href="{% url 'pages:introtheories' %}">common theories</a> for an introduction to some of the more common explanations and <a href="{% url 'pages:brave_new_world' %}">brave new world</a> for information on where we stand today.
+
+
+
+</p>
+
+	{% endblock content %}
+
+</body>
+</html>
